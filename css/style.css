@@ -1,0 +1,206 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+.main-nav{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    background-color: #7ba8e2;
+    padding:20px 0px;
+}
+.nav-logo{
+    font-family: cursive;
+    text-shadow: 1px 1px 5px #1a2833;
+    margin: 0px 5px;
+    font-weight: bolder;
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar{
+    justify-self: end;
+    align-self: center;
+}
+li , a{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px 5px;
+    font-family: Impact;
+    color: #05575d;
+    font-size: 1.1em;
+}
+@keyframes cover-animation{
+0% {background-image: url(../img/laptop.png)}
+16%{background-image: url(../img/laptop.png)}
+32% {background-image: url(../img/router.png)}
+62%{background-image: url(../img/printer.png)}
+80% {background-image: url(../img/tablet.png)}
+90%{background-image: url(../img/tablet.png)}
+}
+
+.cover{
+    margin:10px 0px;
+    display: flex;
+    animation: cover-animation 7s infinite;
+    width: 100%;
+    background-image: url(../img/laptop.png);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+}
+.cover h1{
+    width: 60%;
+    text-transform: uppercase;
+    font-family: fantasy;
+    line-height: 50px;
+    font-size: 3em;
+    letter-spacing: 5px;
+    color: #0076de;
+    text-align: center;
+    text-shadow: 1px 2px 7px #323a43;
+}
+.prod-container{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    width: 80%;
+    margin:40px auto;
+    padding:20px;
+}
+.prod-container:hover{
+    border:3px solid #0076de;
+    border-radius: 30px 0px 30px 0px;
+    box-shadow: 1px 1px 7px #1b2023;
+}
+.prod-img{
+    width: 70%;
+    height: 50vh;
+    align-self: center;
+    justify-content: center;
+}
+.text-content{
+    padding:20px;
+    font-size: 2em;
+    align-self: center;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+.contact-container{
+    width: 80%;
+    margin:10px auto;
+    background-image: url(../img/tablet.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:auto;
+    padding:10px;
+}
+form{
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin:10px auto;
+}
+input[type="text"], input[type="email"],textarea{
+    width: 50%;
+    font-size: 1.6em;
+    margin:5px 0px;
+    border-radius: 5px;
+    border: 3px solid #0076de;
+    padding:10px
+}
+button{
+    justify-self: center;
+    font-size: 1.3em;
+    color: #fff;
+    background-color: #0076de;
+    border: none;
+    padding:10px;
+    border-radius: 10px;
+}
+.text-title{
+    font-size: 2.5em;
+    font-family: fantasy;
+    text-shadow: 1px 2px 4px #9ac7fb;
+    text-align: center;
+}
+.about-container{
+    width: 80%;
+    margin:20px auto;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+}
+.about-img{
+    width: 80%;
+    height: 70vh;
+
+}
+.about-text{
+    padding:20px;
+    font-size: 3.5em;
+    align-self: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    text-shadow: 1px 2px 7px #478edf;
+}
+#toggle{
+    display: none;
+    margin: 0px 5px;
+    align-self: center;
+    justify-self: end;
+    height: 50px;
+    width: 50px;
+    background-image: url(../img/toggle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+@media only screen and (max-width:670px){
+    .cover h1{
+        font-size: 2.4em;
+        letter-spacing: 2px;
+        line-height: 40px;
+    }
+    .text-content{
+        padding:10px;
+        font-size: 1.3em;
+    }
+    input[type="text"], input[type="email"],textarea{
+        width: 80%;
+        font-size: 1.4em;
+    }
+    .about-text{
+        font-size: 1.7em;
+    }
+    .prod-container{
+        padding:10px;
+    }
+}
+@media only screen and (max-width:500px){
+    .nav-bar{
+        display: none;
+    }
+    #toggle{
+        display: block;
+        display: absolute;
+    }
+    .side-bar{
+        display: block;
+        position: absolute;
+        width: 200px;
+        margin:175px 0px 0px 0px;
+        background-color: #8cc3f3;
+        padding:20px;
+        text-align: center;
+        border-radius: 0px 0px 0px 10px;
+    }
+    .side-bar ul{
+        display: block;
+    }
+    .main-nav{
+        padding:8px 0px;
+    }
+}
